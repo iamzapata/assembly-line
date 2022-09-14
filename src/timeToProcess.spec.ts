@@ -53,6 +53,18 @@ describe("timeToProcess", () => {
     ]
 
     expect(timeToProcess(products, 50)).toEqual(5)
+
+    products = [
+      {id: "1", timeToProcess: 2},
+      {id: "2", timeToProcess: 2},
+      {id: "3", timeToProcess: 2},
+      {id: "4", timeToProcess: 2},
+      {id: "5", timeToProcess: 3},
+      {id: "6", timeToProcess: 10},
+      {id: "7", timeToProcess: 2},
+    ]
+
+    expect(timeToProcess(products, 2)).toEqual(14)
   });
 
 })
